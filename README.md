@@ -8,6 +8,8 @@ Users can:
 - See records of wins, losses and draws
 - Reset the records
 
+See [Live Site](https://dev-dylann.github.io/rock-paper-scissors/)
+
 ## Built With
 
 - Semantic HTML5 markup
