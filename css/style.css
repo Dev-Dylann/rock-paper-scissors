@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Montserrat, sans-serif;
+    color: black;
+
+    display: grid;
+    place-content: center;
+
+    background-color: #5433FF;
+    background: linear-gradient(135deg, #5433FF, #20BDFF, #A5FECB);
+}
+
+.cont {
+    width: min(80vw, 600px);
+    height: min(70vh, 500px);
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 10px 5px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+
+    backdrop-filter: brightness(0.6);
+    position: relative;
+}
+
+.title {
+    text-align: center;
+    color: black;
+    font-size: 1.5rem;
+}
+
+.game-area {
+    height: 30%;
+    margin-block: 20px;
+    padding-inline: 10px;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.player,
+.computer {
+    width: 25%;
+    height: 80%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.name {
+    font-weight: bold;
+}
+
+.player-choice,
+.computer-choice {
+    width: 80%;
+    height: 45%;
+
+    display: grid;
+    place-content: center;
+    transition: all 0.35s ease;
+}
+
+.vs {
+    width: 15%;
+    height: 45%;
+    font-weight: bold;
+
+    display: grid;
+    place-content: center;
+}
+
+.header {
+    text-align: center;
+    font-size: 1.25rem;
+    margin-block: 10px;
+}
+
+.choosing {
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    column-gap: 30px;
+    row-gap: 5px;
+}
+
+.choice {
+    background-color: whitesmoke;
+
+
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    position: relative;
+
+    display: grid;
+    place-content: center;
+}
+
+.fa-solid {
+    font-size: 2rem;
+    transform: rotate(90deg);
+}
+
+.choice:first-child::after {
+    content: "Rock";
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.choice:nth-child(2)::after {
+    content: "Paper";
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.choice:last-child::after {
+    content: "Scissors";
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.records {
+    margin-block: 65px;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+}
+
+.wins,
+.losses,
+.draws {
+    width: 28%;
+    height: 50px;
+    border-radius: 7px;
+    color: white;
+
+    display: grid;
+    place-content: center;
+    text-align: center;
+}
+
+.wins {
+    background-color: green;
+}
+
+.draws {
+    background-color: grey;
+}
+
+.losses {
+    background-color: red;
+}
+
+.result {
+    display: grid;
+    place-content: center;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    text-shadow: 0px 5px 5px whitesmoke;
+
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    backdrop-filter: blur(10px) brightness(0.2);
+}
+
+.show {
+    animation: showWinner 3s ease 1s 1 normal forwards;
+}
+
+@keyframes showWinner {
+    20% {
+        top: 0;
+    }
+
+    80% {
+        top: 0;
+    }
+}
+
+.player-win {
+    border: 10px solid green;
+}
+
+.computer-win {
+    border: 10px solid red;
+}
+
+.tie {
+    border: 10px solid grey;
+}
+
+.reset {
+    border: 2px solid black;
+    border-radius: 7px;
+    background-color: transparent;
+    height: 36px;
+    padding-inline: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1rem;
+    display: block;
+    margin-inline: auto;
+    margin-block: 30px;
+}

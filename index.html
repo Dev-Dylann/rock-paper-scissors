@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/main.js"></script>
+    <script
+      src="https://kit.fontawesome.com/8d9ba8ddc1.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="cont main">
+      <h1 class="title">Rock Paper Scissors</h1>
+
+      <div class="game-area">
+        <div class="player">
+          <p class="name">You</p>
+          <div class="player-choice"></div>
+        </div>
+        <div class="vs">VS</div>
+        <div class="computer">
+          <p class="name">Computer</p>
+          <div class="computer-choice"></div>
+        </div>
+      </div>
+
+      <h2 class="header">Make A Choice</h2>
+      <div class="choosing">
+        <div class="choice" id="rock">
+          <i class="fa-solid fa-hand-back-fist"></i>
+        </div>
+        <div class="choice" id="paper"><i class="fa-solid fa-hand"></i></div>
+        <div class="choice" id="scissors">
+          <i class="fa-solid fa-hand-scissors"></i>
+        </div>
+      </div>
+
+      <div class="records">
+        <div class="wins"><span class="win-value"></span> Wins</div>
+        <div class="draws"><span class="draw-value"></span> Draws</div>
+        <div class="losses"><span class="loss-value"></span> Losses</div>
+      </div>
+
+      <div class="cont result">Computer Wins!</div>
+    </div>
+
+    <button class="reset">Reset History</button>
+  </body>
+</html>
